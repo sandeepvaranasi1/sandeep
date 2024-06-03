@@ -10,6 +10,8 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
         }
 
         #box1 {
@@ -27,6 +29,7 @@
             justify-content: space-around;
             flex-wrap: wrap;
             text-align: center;
+            padding: 20px;
         }
 
         .header img {
@@ -40,24 +43,30 @@
             font-size: 24px;
         }
 
-        .menu {
-            background-color: black;
+        .container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
         }
 
-        .menu-left, .menu-center, .menu-right {
+        .sidebar {
             background-color: aliceblue;
             border-radius: 5px;
-            margin: 10px;
             padding: 10px;
-            text-align: center;
+            margin: 10px;
+            flex: 1 1 200px;
         }
 
-        .menu-left img, .menu-center img {
+        .sidebar img {
             height: 50px;
             width: 50px;
+        }
+
+        .main {
+            flex: 3;
+            padding: 10px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 5px;
         }
 
         .login-section {
@@ -109,7 +118,11 @@
                 max-height: 50px;
             }
 
-            .menu-left, .menu-center, .menu-right {
+            .sidebar {
+                flex: 1 1 100%;
+            }
+
+            .main {
                 flex: 1 1 100%;
             }
 
@@ -132,56 +145,58 @@
 </head>
 <body>
     <div class="header">
-        <table>
-            <td style="padding-left: 150px;padding-right: 180px;"><img src="https://sabarimalaonline.org/assets/images/Logo_1.png" alt=""></td>
-            <td style="padding-left: 30px;padding-right: 50px;"><h1 style="padding: 50px; color: white;font-size: 50px;">Sabarimala Online Services</h1></td>
-            <td style="padding-left: 50px;padding-right: 180px;"><img src="https://sabarimalaonline.org/assets/images/Logo_1.png" alt=""></td>
-        </table>
+        <img src="https://sabarimalaonline.org/assets/images/Logo_1.png" alt="">
+        <h1>Sabarimala Online Services</h1>
+        <img src="https://sabarimalaonline.org/assets/images/Logo_1.png" alt="">
     </div>
 
-    <div class="menu">
-        <div class="menu-left">
-            <img src="https://th.bing.com/th/id/R.83df76596230805f5447910243509f57?rik=e7u23ZEe0Y8YwQ&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f5%2fNamaste-PNG-Photo.png&ehk=XpEWqSGJoHrlZDt7fThpgFyB4Hs%2fVSaK4QU%2bA7A4e%2bg%3d&risl=&pid=ImgRaw&r=0" alt="Virtual-Q"> Virtual-Q
+    <div class="container">
+        <div class="sidebar">
+            <div>
+                <img src="https://th.bing.com/th/id/R.83df76596230805f5447910243509f57?rik=e7u23ZEe0Y8YwQ&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f5%2fNamaste-PNG-Photo.png&ehk=XpEWqSGJoHrlZDt7fThpgFyB4Hs%2fVSaK4QU%2bA7A4e%2bg%3d&risl=&pid=ImgRaw&r=0" alt="Virtual-Q"> Virtual-Q
+            </div>
+            <div>
+                <img src="https://th.bing.com/th/id/OIP.ffj9PnQJtgPO12kBguH8uwHaHa?pid=ImgDet&rs=1" alt="Kanike Hundi"> Kanike Hundi
+            </div>
+            <div>
+                <img src="https://sabarimalaonline.org/assets/images/CS_left_Banner.jpg" alt="Banner" style="height: 200px; width: 200px; padding: 20px;">
+            </div>
         </div>
-        <div class="menu-center">
-            <img src="https://th.bing.com/th/id/OIP.ffj9PnQJtgPO12kBguH8uwHaHa?pid=ImgDet&rs=1" alt="Kanike Hundi"> Kanike Hundi
-        </div>
-        <div class="menu-right">
-            <img src="https://sabarimalaonline.org/assets/images/CS_left_Banner.jpg" alt="Banner" style="height: 200px; width: 200px; padding: 20px;">
-        </div>
-    </div>
 
-    <div class="login-section">
-        <label style="color: orange;" id="box1">Login Here</label>
-        <input id="box1" type="text" placeholder="Enter Your Name">
-        <input id="box1" type="password" placeholder="Password">
-        <button id="box1" style="background-color: orange; color: white; border: transparent;">Login</button>
-        <a style="color: orange;" href="https://sabarimalaonline.org/#/mobforgotpwd">Forgot Password?</a>
-        <button id="box1" style="background-color: orange; color: white; border: transparent;">Register</button>
-    </div>
+        <div class="main">
+            <div class="login-section">
+                <label style="color: orange;" id="box1">Login Here</label>
+                <input id="box1" type="text" placeholder="Enter Your Name">
+                <input id="box1" type="password" placeholder="Password">
+                <button id="box1" style="background-color: orange; color: white; border: transparent;">Login</button>
+                <a style="color: orange;" href="https://sabarimalaonline.org/#/mobforgotpwd">Forgot Password?</a>
+                <button id="box1" style="background-color: orange; color: white; border: transparent;">Register</button>
+            </div>
 
-    <div class="main-content">
-        <marquee width="70%" style="color: skyblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20px;">
-            !! latest updates!! virtual q quota for the month of meda vishnu festavil (11th apr to 19th apr) is now released! ! swamy saranam
-        </marquee>
-        <p style="font-size: 20px; color: orange;">Welcome to the NextGen Online Services Platform for availing Pilgrim Services @ Sabarimala.</p>
-        <hr>
-        <ul>
-            <li>Kanikka / Hundi Service is now available for Registered User and Guest User.</li>
-            <li>Covid-19 Guideline - All Pilgrims visiting Sabarimala are advised to wear Facial mask all the time during the Pilgrimage to protect yourself and other fellow Pilgrims.</li>
-            <li>No Tour Operator in Aviation sector has been granted permission to offer Helicopter facility at Nilakkal by Travancore Devaswom Board, for the time being.</li>
-            <li>Travancore Devaswom Board will never ask to share details of Debit Credit cards, Account Number, ATM PIN, Passwords, CVV, OTP over phone / email. Please do not share with anyone.</li>
-            <li>Please click <a href="https://sabarimalaonline.org/#/Videoguide">here</a> to refer the help videos</li>
-        </ul>
-        <p style="color: orange; font-size: 20px;">Latest Updates</p>
-        <hr>
-        <ul>
-            <li>Pilgrim registration is mandatory with valid Mobile Number and e-Mail address for availing online Services. Virtual-Q booking is not required for children with age of below 5 years.</li>
-            <li>Please complete the registration process well in advance to start availing the services related to Virtual Q (Darshan) and Prasadams.</li>
-            <li>Annadanam is available at free of cost at Sabarimala, Pamba, Nilakkal and Erumely temples. All pilgrims can make use of the facility during their visit to Sabarimala.</li>
-            <li>Travancore Devaswom Board has made all necessary arrangements at Idathavalams (Pilgrim Shelters) at different centers across the state of Kerala. For more details on Idathavalams.</li>
-            <li>For any enquiries and grievances, please write to Pilgrim help desk.</li>
-        </ul>
+            <div class="main-content">
+                <marquee width="70%" style="color: skyblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20px;">
+                    !! latest updates!! virtual q quota for the month of meda vishnu festavil (11th apr to 19th apr) is now released! ! swamy saranam
+                </marquee>
+                <p style="font-size: 20px; color: orange;">Welcome to the NextGen Online Services Platform for availing Pilgrim Services @ Sabarimala.</p>
+                <hr>
+                <ul>
+                    <li>Kanikka / Hundi Service is now available for Registered User and Guest User.</li>
+                    <li>Covid-19 Guideline - All Pilgrims visiting Sabarimala are advised to wear Facial mask all the time during the Pilgrimage to protect yourself and other fellow Pilgrims.</li>
+                    <li>No Tour Operator in Aviation sector has been granted permission to offer Helicopter facility at Nilakkal by Travancore Devaswom Board, for the time being.</li>
+                    <li>Travancore Devaswom Board will never ask to share details of Debit Credit cards, Account Number, ATM PIN, Passwords, CVV, OTP over phone / email. Please do not share with anyone.</li>
+                    <li>Please click <a href="https://sabarimalaonline.org/#/Videoguide">here</a> to refer the help videos</li>
+                </ul>
+                <p style="color: orange; font-size: 20px;">Latest Updates</p>
+                <hr>
+                <ul>
+                    <li>Pilgrim registration is mandatory with valid Mobile Number and e-Mail address for availing online Services. Virtual-Q booking is not required for children with age of below 5 years.</li>
+                    <li>Please complete the registration process well in advance to start availing the services related to Virtual Q (Darshan) and Prasadams.</li>
+                    <li>Annadanam is available at free of cost at Sabarimala, Pamba, Nilakkal and Erumely temples. All pilgrims can make use of the facility during their visit to Sabarimala.</li>
+                    <li>Travancore Devaswom Board has made all necessary arrangements at Idathavalams (Pilgrim Shelters) at different centers across the state of Kerala. For more details on Idathavalams.</li>
+                    <li>For any enquiries and grievances, please write to Pilgrim help desk.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
